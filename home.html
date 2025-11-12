@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/home_icon.png">
+</head>
+<body>
+    <header>
+  <div class="container">
+    <h1 class="logo">Lucas VERRON</h1>
+
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Ouvrir le menu">
+    <label for="menu-toggle" class="menu-toggle">
+      <span></span>
+    </label>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <section id="accueil" class="en_tete">
+        <div class="container">
+            <h2>Bienvenue sur mon portfolio</h2>
+            <p>Je m'appelle Lucas VERRON, futur ingénieurs diplomé de l'école JUNIA à Bordeaux.</p>
+            <a href="#projets" class="btn">Voir mes projets</a>
+        </div>
+    </section>
+
+    <section id="a-propos">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Investi dans l'informatique depuis le collège, mon but est d'apprendre à pouvoir concevoir divers projets dans le domaine de l'informatique et du numérique. Je suis sportif, travailleur et toujours à l'écoute de mes collègues. J'ai fais un stage volontaire en 2nd (au lycée) dans une entrepise informatique du nom de Gématique à Périgueux, j'ai étudier au lycée Albert Claveille à Périgueux avec option mathématiques et NSI en terminale et je décroche mon BAC avec mention assez bien.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <div class="container">
+            <h2>Mes compétences</h2>
+            <div class="skills-menu">
+                <div class="skill">
+                    <h3>HTML / CSS</h3>
+                </div>
+                <div class="skill">
+                    <h3>Python</h3>
+                </div>
+                <div class="skill">
+                    <h3>Language C</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <div class="container">
+            <h2>Mes projets</h2>
+            <div class="projects-menu">
+                <article class="project">
+                    <h3>Echecs</h3>
+                    <p>Mon but est de concevoir le célèbre jeu d'échecs sur Python sans aucun bug de mouvements de pièces puis de pouvoir recréer les différents robots (bots) présents sur chess.com</p>
+                    <a href="https://www.chess.com/home" class="btn">Voir l'exemple du projet</a>
+                </article>
+
+                <article class="project">
+                    <h3>Code simulation</h3>
+                    <p>Mon but est de créer un code permettant de simuler quelque chose, je tiens cette idée de Code BH sur youtube qui créer des vidéos simulant diverses situations.</p>
+                    <a href="https://www.youtube.com/@codebh" class="btn">Voir Code BH</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="mailto:lucas.verron@students.junia.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>2025 Lucas VERRON</p>
+            <div class="socials">
+                <!-- <a href="#" aria-label="LinkedIn">LinkedIn</a> -->
+                <!-- Je n'ai pas encroe de compte LinkedIn donc je le laisse en commentaire pour l'instant -->
+                <a href="https://github.com/Loucas24" aria-label="GitHub">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

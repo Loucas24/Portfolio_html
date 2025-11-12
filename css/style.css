@@ -1,0 +1,405 @@
+
+/* La majorité des éléments non présents dans le cours ont été trouvés sur code.tutsplus.com, MDN Web Docs ainsi que sur la chaine youtube de Graven (fais des vidéos codage web, python ...*/
+
+*{ 
+    margin: 0;
+    padding: 0;
+}
+
+html{ 
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.8;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0;
+}
+
+h1, h2, h3{
+    color: #222;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header{
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo{
+    font-size: 24px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a{
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover{
+    color: black;
+}
+
+.en_tete{
+    background: linear-gradient(90deg, #1d3352, #00bfff);
+    color: #fff;
+    text-align: center;
+    padding: 96px 16px;
+}
+
+.en_tete h2{
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.en_tete p{
+    font-size: 19px;
+    margin-bottom: 24px;
+}
+
+.btn{
+    display: inline-block;
+    background: #fff;
+    color: black;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background: black;
+    color: #fff;
+}
+
+#a-propos{
+    padding: 64px 0;
+    background: #f4f4f4;
+}
+
+#a-propos h2{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+}
+
+.about-text{
+    text-align: center;
+}
+
+#competences{
+    padding: 64px 0;
+}
+
+#competences h2{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.skills-menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    text-align: center;
+}
+
+.skill{
+    background: #f4f4f4;
+    padding: 32px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#projets{
+    padding: 64px 0;
+    background: #f4f4f4;
+}
+
+#projets h2{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.projects-menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project{
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover{
+    transform: translateY(-5px);
+}
+
+.project h3{
+    margin: 16px;
+}
+
+.project p{
+    margin: 0 16px 16px;
+}
+
+#contact{
+    background: linear-gradient(90deg, #1d3352, #00bfff);
+    color: #fff;
+    padding: 64px 0;
+}
+
+#contact h2{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.contact-form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group{
+    margin-bottom: 16px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+button.btn{
+    width: 100%;
+}
+
+footer{
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.socials{
+    margin-top: 16px;
+}
+
+.socials a{
+    color: #fff;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover{
+    color: black;
+}
+
+.menu-checkbox{
+  display: none;
+}
+
+.menu-toggle{
+  display: none;
+}
+
+@media (max-width: 768px){
+  header .container{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .menu-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    z-index: 101;
+  }
+
+  .menu-toggle::before,
+  .menu-toggle::after,
+  .menu-toggle span{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .menu-toggle span{
+    margin: 5px 0;
+  }
+
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 240px;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: right;
+    z-index: 100;
+    transition: max-height 0.4s ease;
+  }
+
+  .menu-checkbox:checked + .menu-toggle + nav .nav-links{
+    max-height: 500px;
+  }
+
+  .menu-checkbox:checked + .menu-toggle::before{
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-checkbox:checked + .menu-toggle::after{
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .menu-checkbox:checked + .menu-toggle span{
+    opacity: 0;
+  }
+
+  .en_tete{
+    padding: 80px 16px;
+  }
+
+  .en_tete h2{
+    font-size: 32px;
+  }
+
+  .en_tete p{
+    font-size: 16px;
+  }
+
+  .about-content{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-menu{
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .projects-menu{
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form{
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait){
+  body{
+    font-size: 15px;
+  }
+
+  .en_tete{
+    padding: 64px 16px;
+  }
+
+  .en_tete h2{
+    font-size: 28px;
+  }
+
+  .en_tete p{
+    font-size: 14px;
+  }
+
+  footer p{
+    font-size: 12px;
+  }
+
+  .nav-links{
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a{
+    display: block;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape){
+  body{
+    font-size: 14px;
+  }
+
+  .en_tete{
+    padding: 48px 32px;
+  }
+
+  .en_tete h2{
+    font-size: 25px;
+  }
+
+  .about-content{
+    gap: 16px;
+  }
+
+  .nav-links{
+    width: 200px;
+    text-align: right;
+  }
+}
